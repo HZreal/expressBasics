@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express()
-
+const port = 3000
 
 app.get('/get', (req, res) => {
     console.log(req)
@@ -13,8 +13,8 @@ app.post('/post', (req, res) => {
     res.send({code: 0, msg: 'success', data: 'data'})
 })
 
-app.listen(80, () => {
-
+app.listen(port, () => {
+    console.log(`server is listening at ${port} !    `)
 })
 
 
